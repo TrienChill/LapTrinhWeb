@@ -1,0 +1,473 @@
+﻿* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+form {
+    padding: 3px;
+    //float: right;
+}
+
+html {
+    background-color: #e9e9e9;
+}
+#Img_logo-Blog {
+    width: 175px;
+    height: 40px;
+    float:left;
+}
+
+#Img_logo-Blog  img {
+    width: 175px;
+    height: 40px;
+}
+
+#Name_page-Blog {
+    width: 1058px;
+    height: 148px;
+    float: left;
+}
+
+    #Name_page-Blog h2 {
+        color: #00b0e9;
+        padding: 50px;
+        font-size: 30px;
+    }
+
+body {
+    line-height: 20px;
+}
+#Top-Content {
+    width: 1060px;
+    min-height: 0px;
+    margin-top: 2%;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+#Wapper-Blog {
+    background-color: #e9e9e9;
+    width: auto;
+    min-height: 450px;
+    margin: 0px auto;
+}
+#Info-Card {
+    position: fixed;
+    top: 50%;
+    left: -480px;
+    transform: translate(-0%,-50%);
+    max-width: 480px;
+    min-height: 200px;
+    z-index: 20;
+    float: left;
+    transition: left .7s;
+    background-color: white;
+    box-shadow: rgba(0,0,0,0.3) 0 0 10px,rgba(0,0,0,0.15) 0 1px 6px;
+}
+#Show-card {
+    background: #e31919;
+    border: 1px solid white;
+    border-radius: 0 4px 4px 0;
+    color: #fff;
+    float: left;
+    width: 30px;
+    height: 100px;
+    position: fixed;
+    margin-left: 480px;
+    margin-top: 20%;
+}
+
+    #LH {
+        transform: rotate(-90deg);
+        white-space: nowrap;
+        letter-spacing: 3px;
+        font-size: 90%;
+        font-weight: 500;
+        margin-top: 200%;
+    }
+#card-title {
+    float: left;
+    
+}
+#Info-Card:hover {
+    left: 0px;
+}
+#text-title h5 {
+    color: #929497;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px;
+}
+#text-info h5{
+    text-align: center;
+    font-size:15px;
+    color: #929410;
+}
+
+#Zalo_Sdt{
+    float: left;
+    padding:40px;
+}
+#Zalo {
+    width: 200px;
+    float: left;
+    height: 100px;
+    background-color: #221f20;
+    box-shadow: rgba(0,0,0,0.3) 0 0 6px,rgba(0,0,0,0.15) 0 1px 6px;
+    border-top-left-radius: 40px;
+}
+#Fb {
+    width: 200px;
+    float: left;
+    height: 100px;
+    background-color: #221f20;
+    box-shadow: rgba(0,0,0,0.3) 0 0 6px,rgba(0,0,0,0.15) 0 1px 6px;
+    border-bottom-right-radius: 40px;
+}
+#TabPaging {
+    width: auto;
+    height: 30px;
+    text-align: center;
+}
+
+    #Banner-Blog {
+        width: auto;
+        height: 200px;
+    }
+
+    #Banner-Blog img {
+        width: 1415px;
+        height: 200px;
+    }
+
+    #Top-Blog {
+        width: auto;
+        height: 50px;
+        padding: 10px 100px 50px 100px;
+        background-color: #221f20;
+    }
+
+    #menu-Blog {
+        width: 1060px;
+        height: 50px;
+        color: #ffffff;
+        font-size: 20px;
+        background-color: #221f20;
+        padding: 5px 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #menu-Blog ul {
+        list-style: none;
+    }
+    #menu-Blog ul li {
+        float: left;
+        padding: 10px;
+        text-decoration:none;
+    }
+
+        #menu-Blog ul li a {
+            color: #929497;
+            text-decoration: none;
+        }
+
+    #menu-Blog ul li a:hover {
+        color: #ffffff;
+    }
+
+    #ContentsLayout-Blog {
+        width: 1060px;
+        background-color: #e9e9e9;
+        min-height: 400px;
+        margin: 20px auto 0 auto;
+    }
+
+    #Content-Blog-Menu {
+        width: 290px;
+        min-height: 400px;
+        float: right;
+        background-color: white;
+    }
+
+    #Content-Blog {
+        width: 750px;
+        min-height: 400px;
+        float: left;
+        background-color: white;
+    }
+
+.tab {
+    width: 375px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+    .tab li {
+        list-style: none;
+        float: left;
+        padding: 3px 5px;
+        border: 1px solid #f80000;
+    }
+
+    .tab li a {
+        text-decoration: none;
+        color: #000000;
+    }
+
+    .Menu_bottom-Blog {
+        width: auto;
+        height: 150px;
+        background-color: #221f20;
+        text-align: inherit;
+    }
+
+#Bottom-Blog {
+    height: 285px;
+    text-align: inherit;
+    float: left;
+    width: -moz-available;
+    background-color: #221f20;
+}
+
+    .Copyright-Blog {
+        color: black;
+        font-size: 18px;
+        width: auto;
+        height: 35px;
+        padding: 10px;
+        background-color: #dbdbdb;
+    }
+
+    #Bottom-Blog .Copyright-Blog > h5 {
+        font-size: 18px;
+    }
+
+    .Permission-Blog {
+        color: black;
+        font-size: 18px;
+        width: auto;
+        height: 35px;
+        padding: 10px;
+        background-color: #dbdbdb;
+    }
+.clearfixmenu:after {
+    display: block;
+    clear: both;
+}
+.menu_top {
+    width: 860px;
+    margin: 0px auto;
+    height: 50px;
+}
+.menu_top li {
+    margin:0px;
+    list-style:none;
+    font-family:'Ek Mukta';
+}
+.menu_top a {
+    transition:all linear 0.15s;
+    color:white;
+    text-decoration:none;
+}
+.menu_top .arrow {
+    font-size:11px;
+    line-height:0%;
+} 
+/*----- css cho phần menu cha -----*/
+.menu_top > ul > li {
+    float:left;
+    display:inline-block;
+    position:relative;
+    font-size:19px;
+}
+.menu_top > ul > li:hover{
+    background-color:#929497;
+    color: black;
+}
+.menu_top > ul > li > a {
+    padding:10px 25px;
+    display:inline-block;
+    color:white;
+}
+/*----css cho menu con----*/
+.menu_top li:hover ul {
+    z-index:1;
+    opacity:1;
+}
+.clearfixmenu li ul {
+    min-width: 125%;
+    padding: 5px 0px;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity linear 0.15s;
+    box-shadow: 0px 2px 3px rgba(0,0,0,0.2);
+    background: #2e2728;
+}
+.clearfixmenu ul li {
+    display: block;
+    font-size: 16px;
+}
+.clearfixmenu ul li:hover {
+    background-color: #929497;
+}
+.clearfixmenu ul li a {
+    padding: 10px 30px;
+    display: block;
+}
+    #video {
+        margin: 20px;
+    }
+    /*.........................*/
+    /* Slideshow container */
+    .slideshow-container {
+        width: 1060px;
+        height: 200px;
+        position: relative;
+        margin: auto;
+    }
+    /* Ẩn các slider */
+    .mySlides {
+        display: none;
+    }
+    /* Định dạng nội dung Caption */
+    .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+    }
+    /* định dạng các chấm chuyển đổi các slide */
+    .dot {
+        cursor: pointer;
+        height: 20px;
+        width: 15px;
+        margin: 0px;
+        background-color: white;
+        border-radius: 15%;
+        display: inline-block;
+        /*transition: background-color 0.6s ease;*/
+    }
+    /* khi được hover, active đổi màu nền */
+    .active, .dot:hover {
+        background-color: #e31919;
+    }
+    /* Thêm hiệu ứng khi chuyển đổi các slide */
+    /*.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 3s;
+    animation-name: fade;
+    animation-duration: 3s;
+}
+*/
+    img {
+        width: 1060px;
+        height: 200px;
+    }
+
+    @-webkit-keyframes fade {
+        from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.menufooter:after {
+    display: block;
+    clear: both;
+}
+.menu-footers {
+    width: 1060px;
+    margin: 0px auto;
+    height: 50px;
+}
+    .menu-footers li {
+        margin: 0px;
+        list-style: none;
+        font-family: 'Ek Mukta';
+    }
+
+    .menu-footers a {
+        transition: all linear 0.15s;
+        color: #929497;
+        text-decoration: none;
+    }
+    .menu-footers a:hover{
+        color:white;
+    }
+    .menu-footers .arrow {
+        font-size: 11px;
+        line-height: 0%;
+    }
+    /*----- css cho phần menu cha -----*/
+    .menu-footers > ul > li {
+        float: left;
+        display: inline-block;
+        position: relative;
+        font-size: 19px;
+        margin-top: 20px;
+    }
+
+        .menu-footers > ul > li:hover {
+/*            background-color: #929497;
+            color: black;*/
+        }
+
+        .menu-footers > ul > li > a {
+            padding: 10px 90px;
+            display: inline-block;
+            color: white;
+        }
+    /*----css cho menu con----*/
+/*    .menu-footers li:hover ul {
+        z-index: 1;
+        opacity: 1;
+    }*/
+
+.menufooter li ul {
+    min-width: 125%;
+    padding: 5px 0px;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    transition: opacity linear 0.15s;
+}
+
+.menufooter ul li {
+    display: block;
+    font-size: 16px;
+    margin-left: 60px;
+}
+
+    .menufooter ul li:hover {
+/*        background-color: #929497;*/
+    }
+
+.menufooter ul li a {
+    padding: 10px 30px;
+    display: block;
+}

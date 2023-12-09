@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "PageItemListF";
+    Layout = "~/Views/Layout/_LayoutPage.cshtml";
+}
+<style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
+    h2 {margin: 20px;}
+    #ListOut {margin-left: 30px;width: 800px;height: auto;border: 1px solid black;}
+    #ListOut tr td {font-size: 18px;padding: 10px;text-align: center;}
+    #ListOut tr td b {font-size: 20px;}
+    #ID_MN {font-size: 17px;}
+    #add{margin-left: 30px;padding:5px;}
+    #key {width: 230px;height: 30px;margin-left:30px;}
+    button {font-size: 17px;text-decoration: none;}
+    .link {text-decoration: none;}
+</style>
+@model PagedList.IPagedList<NEWSMODELS.Models.PageFooter>
+@using PagedList.Mvc;
+@using NEWSMODELS.Models;
+<h2 style="text-align:center;">___TIN FOOTER___</h2>
+<button id="add" type="submit">@Html.ActionLink("Thêm tin mới", "AddPageF", new { @class = "link" })</button>
+@using (Html.BeginForm("PageItemListF", "PageFooter"))
+{
+    if (Model != null)
+    {
+        <table id="ListOut">
+            <tr style="padding: 50px"><td width="100px"><b>ID_F</b></td><td width="200px"><b>Title</b></td><td><b>Edit</b></td><td><b>Delete</b></td></tr>
+            @foreach (var m in Model)
+             {
+                <tr>
+                    <td>@m.ID_F</td>
+                    <td>@m.TitleF</td>
+                    <td>@Html.ActionLink(" ", "EditPageF", new { id = m.ID_F }, new { @class = "fa fa-edit" })</td>
+                    <td>
+                        @Html.ActionLink(" ", "DeletePageItemF", new { id = m.ID_F }, new
+                   {
+                       @class = "fa fa-close",
+                       onclick = "return confirm('Bạn muốn xóa thật không?');"
+                   })
+                    </td>
+                </tr>
+             }
+        </table>
+    }
+}
+<div class="tab">
+    Trang @(Model.PageCount<Model.PageNumber ? 0: Model.PageNumber) / @Model.PageCount
+    @Html.PagedListPager(Model, page => Url.Action("PageItemListF", new { id = page }))
+</div>
+

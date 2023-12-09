@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "News";
+    Layout = "~/Views/Layout/_LayoutPage.cshtml";
+}
+<style>
+    #key {
+        width: 230px;
+        height: 30px;
+    }
+
+    button {
+        width: 60px;
+        height: 30px;
+    }
+</style>
+@using NEWSMODELS.Models;
+@model PagedList.IPagedList<NEWSMODELS.Models.PageItem>
+@using PagedList.Mvc;
+@using (Html.BeginForm("FindNews", "PageItems", FormMethod.Get))
+{
+    <h3>Tìm kiếm</h3>@Html.TextBox("key")
+    <button type="submit">Tìm kiếm</button>
+}
+@if (Model != null)
+{
+    <table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td ><img style="width: 100px; height: 100px" src="~/UploadedFiles/@item.Image" /></td>
+                <td>
+                    <h3>@Html.ActionLink(item.Title, "EditPageItem", new { id = item.ID_P })</h3>
+                    @Html.Raw(item.Sumary)<br />
+                    @*@Html.Raw(item.Contents)<br />*@
+                    Người đăng: @item.UserAdd - Ngày đăng: @item.CreaDate
+                </td>
+            </tr>
+        }
+    </table>
+}
+<div class="tab">
+    Trang @(Model.PageCount<Model.PageNumber ? 0: Model.PageNumber) / @Model.PageCount
+    @Html.PagedListPager(Model, page => Url.Action("News", new { id = page }))
+</div>
+
+

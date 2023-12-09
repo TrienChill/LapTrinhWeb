@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "EditPageF";
+    Layout = "~/Views/Layout/_LayoutPage.cshtml";
+}
+<style>
+    h2 {margin: 20px;}
+    #Lablel {font-size: 18px;}
+    #Pos {font-size: 18px;}
+    #UrlLink {font-size: 18px;}
+    #ListOut tr td b {font-size: 20px;}
+    #ID_MN {font-size: 17px;}
+    button {font-size: 17px;text-decoration: none;}
+    .link {text-decoration: none;}
+    #ID_Parent {font-size: 17px;}
+    #Sumary, #Title{
+        width: 700px;
+        height: 100px;
+    }
+</style>
+@model NEWSMODELS.Models.PageFooter
+@using (Html.BeginForm("EditPageF", "PageFooter", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+<table>
+    <tr><td>ID Footer :</td><td><b>@Html.TextBox("ID_F", (object)ViewBag.idnew)</b></td></tr>
+    <tr><td>Title :</td><td><b>@Html.TextArea("TitleF")</b></td></tr>
+    <tr>
+        <td>Contents:</td>
+        <td>
+            @Html.TextAreaFor(Model => Model.ContentF, new { @class = "ckeditor", id = "txtcontent" })
+            <script language="javascript" type="text/javascript">
+                CKEDITOR.replace('txtcontent',
+                    {
+                        customConfig: '/Scripts/ckeditor/config.js',
+                        filebrowserImageBrowseUrl: '/Scripts/ckfinder/ckfinder.html?type=Images',
+                        filebrowserUploadUrl: '/Scripts/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Files',
+                        filebrowserImageUploadUrl: '/Uploads/Images'
+                    }
+                )
+            </script>
+        </td>
+    </tr>
+    <tr>
+        <td>Menu bài viết:</td>
+        <td>@Html.DropDownList("ParentID", new SelectList(ViewBag.parents, "ID_Footer", "TitleFooter", ViewBag.parent))</td>
+    </tr>
+    <tr>
+        <td></td>
+        <b class="note">@Html.Raw(ViewBag.Message)</b>
+        <br />
+        <td>
+            <button type="submit">Sửa tin</button>
+        </td>
+    </tr>
+</table>
+}

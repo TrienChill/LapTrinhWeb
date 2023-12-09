@@ -1,0 +1,79 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\code\\Web\\Project\\Template\\Nguyen_An_Khang\\NEWSMODELS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C006D774-F7FE-482E-A01C-E9D7FE6ABE7E}|NEWSMODELS\\NEWSMODELS.csproj|D:\\code\\Web\\Project\\Template\\Nguyen_An_Khang\\NEWSMODELS\\newsmodels\\views\\login\\logins.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C006D774-F7FE-482E-A01C-E9D7FE6ABE7E}|NEWSMODELS\\NEWSMODELS.csproj|solutionrelative:newsmodels\\views\\login\\logins.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C006D774-F7FE-482E-A01C-E9D7FE6ABE7E}|NEWSMODELS\\NEWSMODELS.csproj|D:\\code\\Web\\Project\\Template\\Nguyen_An_Khang\\NEWSMODELS\\newsmodels\\views\\layout\\layout_user.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C006D774-F7FE-482E-A01C-E9D7FE6ABE7E}|NEWSMODELS\\NEWSMODELS.csproj|solutionrelative:newsmodels\\views\\layout\\layout_user.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C006D774-F7FE-482E-A01C-E9D7FE6ABE7E}|NEWSMODELS\\NEWSMODELS.csproj|d:\\code\\web\\project\\template\\nguyen_an_khang\\newsmodels\\newsmodels\\views\\menus\\addmenuparent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C006D774-F7FE-482E-A01C-E9D7FE6ABE7E}|NEWSMODELS\\NEWSMODELS.csproj|solutionrelative:newsmodels\\views\\menus\\addmenuparent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Layout_User.cshtml",
+              "DocumentMoniker": "D:\\code\\Web\\Project\\Template\\Nguyen_An_Khang\\NEWSMODELS\\NEWSMODELS\\Views\\Layout\\Layout_User.cshtml",
+              "RelativeDocumentMoniker": "NEWSMODELS\\Views\\Layout\\Layout_User.cshtml",
+              "ToolTip": "D:\\code\\Web\\Project\\Template\\Nguyen_An_Khang\\NEWSMODELS\\NEWSMODELS\\Views\\Layout\\Layout_User.cshtml",
+              "RelativeToolTip": "NEWSMODELS\\Views\\Layout\\Layout_User.cshtml",
+              "ViewState": "AQIAAKAAAAAAAAAAAAAAAK0AAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2023-12-09T04:03:06.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AddMenuParent.cshtml",
+              "DocumentMoniker": "D:\\code\\Web\\Project\\Template\\Nguyen_An_Khang\\NEWSMODELS\\NEWSMODELS\\Views\\Menus\\AddMenuParent.cshtml",
+              "RelativeDocumentMoniker": "NEWSMODELS\\Views\\Menus\\AddMenuParent.cshtml",
+              "ToolTip": "D:\\code\\Web\\Project\\Template\\Nguyen_An_Khang\\NEWSMODELS\\NEWSMODELS\\Views\\Menus\\AddMenuParent.cshtml",
+              "RelativeToolTip": "NEWSMODELS\\Views\\Menus\\AddMenuParent.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2023-12-09T04:02:17.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Logins.cshtml",
+              "DocumentMoniker": "D:\\code\\Web\\Project\\Template\\Nguyen_An_Khang\\NEWSMODELS\\NEWSMODELS\\Views\\Login\\Logins.cshtml",
+              "RelativeDocumentMoniker": "NEWSMODELS\\Views\\Login\\Logins.cshtml",
+              "ToolTip": "D:\\code\\Web\\Project\\Template\\Nguyen_An_Khang\\NEWSMODELS\\NEWSMODELS\\Views\\Login\\Logins.cshtml",
+              "RelativeToolTip": "NEWSMODELS\\Views\\Login\\Logins.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2023-12-09T03:47:42.37Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+﻿@{
+    ViewBag.Title = "AccoutList";
+    Layout = "~/Views/Layout/_LayoutPage.cshtml";
+}
+<h2 style="text-align:center;">___DANH SÁCH TÀI KHOẢN___</h2>
+<style>
+h2 {
+   margin: 20px;
+}
+#ListOut {
+    margin-left: 30px;
+    width: auto;
+    height: auto;
+    border: 1px solid black;
+}
+#ListOut tr td {
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+}
+#ListOut tr td b {
+    font-size: 20px;
+}
+#UserName {
+    font-size: 17px;
+}
+button {
+    font-size: 17px;
+    margin-left: 30px;
+    text-decoration: none;
+    padding: 5px;
+}
+.link {
+    text-decoration: none;
+    color: darkblue;
+}
+.fa{
+    text-decoration: none;
+    color: darkblue;
+}
+</style>
+@using NEWSMODELS.Models;
+@model NEWSMODELS.Models.Accout
+@using (Html.BeginForm("AccoutsList", "Accouts"))
+{
+<table id="ListOut">
+    <button type="submit">@Html.ActionLink("Thêm tài khoản", "AddAccouts", new { @class = "link" })</button>
+    <tr><td width="100px"><b>Username</b></td><td width="300px"><b>FullName</b></td><td width="300px"><b>Avata</b></td><td><b>Edit</b></td><td><b>Delete</b></td><td><b>ResetPass</b></td></tr>
+    @foreach (Accout a in ((ViewBag.acc) as IEnumerable<Accout>))
+    {
+<tr>
+    <td>@Html.ActionLink(@a.UserName, "ViewAccouts", new { user = a.UserName }, new { @class = "link" })</td>
+    <td>@a.Fullname</td>
+    <td><img style="width: 50px; height: 50px" src="~/UploadAvata/@a.Avata" /></td>
+    <td>@Html.ActionLink(" ", "EditAccouts", new { user = a.UserName }, new { @class = "fa fa-edit" })</td>
+    <td>
+        @Html.ActionLink(" ", "DeleteAccouts", new { user = a.UserName }, new
+        {
+            @class = "fa fa-close",
+            onclick = "return confirm('Có muốn xóa thật không?');"
+        })
+    </td>
+    <td>
+        @Html.ActionLink(" ", "ResetPass", new { user = a.UserName }, new 
+        {   @class = "fa fa-refresh",
+            onclick =  "return confirm('Có muốn đặt lại thật không?');"
+        })
+    </td>
+</tr>
+    }
+</table>
+}

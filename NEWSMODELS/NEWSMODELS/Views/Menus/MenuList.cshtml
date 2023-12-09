@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "MenuList";
+    Layout = "~/Views/Layout/_LayoutPage.cshtml";
+}
+<style>
+    h2 {margin: 20px;}
+    #ListOut {margin-left: 30px;width: auto;height: auto;border: 1px solid black;}
+    #ListOut tr td{font-size:18px;padding:10px;text-align: center;}
+    #ListOut tr td b {font-size: 17px;}       
+    #ID_MN {font-size: 17px;}
+    button {font-size: 18px;text-decoration: none; margin-left:-260px;}
+    #add {font-size: 18px;text-decoration: none;margin-left: 30px;padding: 5px;}
+    .link {text-decoration: none;}
+</style>
+<h2 style="text-align:center;">___DANH MỤC MENU___</h2>
+@using NEWSMODELS.Models;
+@using (Html.BeginForm("MenuList", "Menus"))
+{
+<table id="ListOut">
+    <tr>
+        <td><b>Menu cha:</b></td>
+        <td>@Html.DropDownList("ID_MN", new SelectList(ViewBag.parents, "ID_MN", "Lablel", ViewBag.parent))</td>
+        <td><button type="submit">Tìm kiếm</button></td>
+    </tr>
+    <button id="add" type="submit">@Html.ActionLink("Thêm menu", "AddMenu", new { @class = "link" })</button>
+    <button id="add" type="submit">@Html.ActionLink("Menu Parent", "MenuListParent", new { @class = "link" })</button>
+        <tr><td width="100px"><b>ID_MN</b></td><td width="300px"><b>Lablel</b></td><td width="300px"><b>UrlLink</b></td><td><b>Edit</b></td><td><b>Delete</b></td></tr>
+        @foreach (Menus m in ((ViewBag.menus) as IEnumerable<Menus>))
+        {
+            <tr>
+                <td>@m.ID_MN</td>
+                <td>@Html.ActionLink(@m.Lablel, "ViewMenu", new { id = m.ID_MN }, new { @class = "link" })</td>
+                <td>@m.UrlLink</td>
+                <td>@Html.ActionLink(" ", "EditMenu", new { id = m.ID_MN }, new { @class = "fa fa-edit" })</td>
+                <td>
+                    @Html.ActionLink(" ", "DeleteMenu", new { id = m.ID_MN }, new
+                    {
+                        @class = "fa fa-close",
+                        onclick = "return confirm('Xóa thật không?');"
+                    })
+                </td>
+            </tr>
+        }
+    </table>
+}

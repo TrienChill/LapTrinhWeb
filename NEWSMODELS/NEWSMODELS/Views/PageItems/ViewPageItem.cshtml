@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "ViewPageItem";
+    Layout = "~/Views/Layout/_LayoutPage.cshtml";
+}
+<h2>ViewPageItem</h2>
+<style>
+    h2 {margin: 20px;}
+    a {text-decoration: none;}
+    #ListOut {margin-left: 30px;width: 500px;height: 200px;border: 1px solid black;}
+    #Lablel {font-size: 18px;}
+    #Pos {font-size: 18px;}
+    #UrlLink {font-size: 18px;}
+    #ListOut tr td b {font-size: 20px;}
+    #ID_MN {font-size: 17px;}
+    button {font-size: 17px;margin: 30px;}
+    .link {text-decoration: none;}
+    #ID_Parent {font-size: 17px;}
+</style>
+@model NEWSMODELS.Models.PageItem
+<table id="ListOut">
+    <tr>
+        <td>ID_P: </td>
+        <td><b>@Html.DisplayFor(Model => Model.ID_P)</b></td>
+    </tr>
+    <tr>
+        <td>Title: </td>
+        <td><b>@Html.DisplayFor(Model => Model.Title)</b></td>
+    </tr>
+    <tr>
+        <td>Sumary: </td>
+        <td><b>@Html.DisplayFor(Model => Model.Sumary)</b></td>
+    </tr>
+    <tr>
+        <td>Image</td>
+        <td><img src="~/UploadedFiles/@ViewBag.file" height="50" width="50" /></td>
+    </tr>
+</table>
+<tr><td></td><td><button type="submit">@Html.ActionLink("Trở về", "PageItemList", "PageItems", new { @class = "fa fa-sign-out" })</button></td></tr>

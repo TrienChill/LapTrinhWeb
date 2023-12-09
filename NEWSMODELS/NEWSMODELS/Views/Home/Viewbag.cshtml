@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Viewbag";
+    Layout = "~/Views/Layout/_LayoutPage.cshtml";
+}
+<h2>Viewbag</h2>
+@using NEWSMODELS.Models;
+<table>
+    <tr><b><td>ID_MN</td><td>Lablel</td><td>URL</td></b></tr>
+    @foreach (Menus m in (ViewBag.Menus as IEnumerable<Menus>))
+    {
+        <tr>
+            <td>@m.ID_MN</td>
+            <td>@m.Lablel</td>
+            <td>@m.UrlLink</td>
+            <td>@Html.ActionLink("Xóa menu", "DeleteMenu", new { id = m.ID_MN }, new { onClick = "return confirm('Ban muon xoa khong?');" })</td>
+        </tr>
+    }
+</table>

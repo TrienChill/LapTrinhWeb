@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "EditMenu";
+    Layout = "~/Views/Layout/_LayoutPage.cshtml";
+}
+<style>
+    h2 {margin: 20px;}
+    #Lablel {font-size: 18px;}
+    #Pos {font-size: 18px;}
+    #UrlLink {font-size: 18px;}
+    #td {font-size: 20px;}
+    #ID_MN {font-size: 17px;}
+    button {font-size: 17px;text-decoration: none;}
+    .link {text-decoration: none;}
+    #ID_Parent {font-size: 17px;}
+</style>
+<h2>EditMenu</h2>
+@model NEWSMODELS.Models.Menus
+@using (Html.BeginForm("EditMenu", "Menus"))
+{
+    <table>
+        <tr><td>ID Menu :</td><td><b>@Html.TextBox("ID_MN", (object)ViewBag.idnew)</b></td></tr>
+        <tr><td>Lablel :</td><td><b>@Html.TextArea("Lablel")</b></td></tr>
+        <tr><td>Pos:</td><td><b>@Html.TextBox("Pos")</b></td></tr>
+        <tr><td>UrlLink :</td><td><b>@Html.TextBox("UrlLink")</b></td></tr>
+        <tr>
+            <td>Menu cha:</td>
+            <td>@Html.DropDownList("ID_Parent", new SelectList(ViewBag.parents, "ID_MN", "Lablel", ViewBag.parent), "chọn menu")</td>
+        </tr>
+        <tr>
+            <td></td>
+            <b class="note">@Html.Raw(ViewBag.Message)</b><br />
+            <td>
+                <button type="submit">OK</button>
+            </td>
+        </tr>
+    </table>
+}

@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "ViewMenu";
+    Layout = "~/Views/Layout/_LayoutPage.cshtml";
+}
+<style>
+    h2 {margin: 20px;}
+    a {text-decoration: none;}
+    #ListOut { margin-left: 30px;width: 500px;height: 200px; border: 1px solid black;}
+    #Lablel {font-size: 18px;}
+    #Pos {font-size: 18px;}
+    #UrlLink {font-size: 18px;}
+    #ListOut tr td b {font-size: 20px;}
+    #ID_MN {font-size: 17px;}
+    button { font-size: 17px;margin: 30px;}
+    .link {text-decoration: none;}
+    #ID_Parent {font-size: 17px;}
+</style>
+<h2>Thông tin menu</h2>
+@model NEWSMODELS.Models.Menus
+<table id="ListOut">
+        <tr>
+            <td>ID_MN: </td>
+            <td><b>@Html.DisplayFor(Model => Model.ID_MN)</b></td>
+        </tr>
+        <tr>
+            <td>Lablel: </td>
+            <td><b>@Html.DisplayFor(Model => Model.Lablel)</b></td>
+        </tr>
+        <tr>
+            <td>UserAdd: </td>
+            <td><b>@Html.DisplayFor(Model => Model.UserAdd)</b></td>
+        </tr>
+        <tr>
+            <td> URL: </td>
+            <td><b>@Html.DisplayFor(Model => Model.UrlLink)</b></td>
+        </tr>
+</table>
+<tr><td></td><td><button type="submit">@Html.ActionLink("Trở về ", "MenuList", new { @class = "link" })</button></td></tr>

@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "EditNews";
+    Layout = "~/Views/Layout/_LayoutPage.cshtml";
+}
+<h2>EditNews</h2>
+@model NEWSMODELS.Models.PageItem
+    @Html.TextAreaFor(Model => Model.Contents, new { @class = "ckeditor", id = "txtcontent"})
+    <script language="javascript" type="text/javascript">
+        CKEDITOR.replace('txtcontent',
+        {
+            filebrowserImageBrowseUrl: '/Scripts/ckfinder/ckfinder.html?type=Images',
+            filebrowserUploadUrl: '/Scripts/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Files',
+            filebrowserImageUploadUrl: '/Uploads/Images'
+        }
+                        )
+    </script>

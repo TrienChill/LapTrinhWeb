@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Uploads";
+    Layout = "~/Views/Layout/_LayoutPage.cshtml";
+}
+<h2>Uploads</h2>
+@using (Html.BeginForm("Uploads", "PageItems", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <input type="file" name="file" />
+                <input type="submit"  name="Submit" id="Submit" value="Upload"/>
+                <br />
+                <b class="note"> @ViewBag.massage</b>
+            }
+

@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Layout/LayoutLogin.cshtml";
+}
+<link href="~/CSS/CSS_Login.css" rel="stylesheet" />
+@using (Html.BeginForm("Logins", "Login"))
+{
+    <div class="container">
+        <div><h2 style="text-align:center">ĐĂNG NHẬP</h2></div>
+        <div class="inputs">
+            <label>UserName:</label>
+            @Html.TextBox("UserName")
+            <label>Password:</label>
+            @Html.Password("Password")
+            <span class="note" id="result"></span>
+            <button type="submit" onclick="return checkNull();">Đăng nhập</button>
+            <br />
+            <br />
+            <b class="note">@Html.Raw(ViewBag.Message)</b><br />
+        </div>
+    </div>
+}

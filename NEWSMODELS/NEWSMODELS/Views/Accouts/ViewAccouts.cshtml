@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewBag.Title = "ViewAccouts";
+    Layout = "~/Views/Layout/_LayoutPage.cshtml";
+}
+<h2>ViewAccouts</h2>
+<style>
+    h2 {
+        margin: 20px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    #ListOut {
+        margin-left: 30px;
+        width: 500px;
+        height: 200px;
+        border: 1px solid black;
+    }
+
+    #Lablel {
+        font-size: 18px;
+    }
+
+    #Pos {
+        font-size: 18px;
+    }
+
+    #UrlLink {
+        font-size: 18px;
+    }
+
+    #ListOut tr td b {
+        font-size: 20px;
+    }
+
+    #ID_MN {
+        font-size: 17px;
+    }
+
+    button {
+        font-size: 18px;
+        margin: 30px;
+        padding: 5px;
+    }
+
+    .link {
+        text-decoration: none;
+    }
+
+    #ID_Parent {
+        font-size: 17px;
+    }
+</style>
+<h2>Thông tin menu</h2>
+@model NEWSMODELS.Models.Accout
+@using (Html.BeginForm("ViewAccouts", "Accouts"))
+{
+<table id="ListOut">
+    <tr>
+        <td>UserName: </td>
+        <td><b>@Html.DisplayFor(Model => Model.UserName)</b></td>
+    </tr>
+    <tr>
+        <td>Fullname: </td>
+        <td><b>@Html.DisplayFor(Model => Model.Fullname)</b></td>
+    </tr>
+    <tr>
+        <td>Permission: </td>
+        <td><b>@Html.Raw(Session["permission"]).ToString()</b></td>
+    </tr>
+</table>
+<tr><td></td><td><button type="submit">@Html.ActionLink("Trở về ", "AccoutsList", new { @class = "link" })</button></td></tr>
+}

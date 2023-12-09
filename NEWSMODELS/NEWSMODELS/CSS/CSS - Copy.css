@@ -1,0 +1,150 @@
+﻿* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+h3 a{
+    text-decoration: none;
+    color: #00b0e9;
+}
+form {
+    padding: 3px;
+}
+#Img_logo {
+    width: 175px;
+    height: 148px;
+    float: left;
+}
+#Img_logo img {
+    width: 175px;
+    height: 148px;
+}
+#Name_page {
+    width: 883px;
+    height: 148px;
+    float: left;
+}
+#Name_page h2 {
+    color: #00b0e9;
+    padding:50px;
+    font-size: 30px;
+}
+body {
+    line-height: 20px;
+}
+#Wapper {
+    width: 1060px;
+    min-height: 450px;
+    margin: 0px auto;
+    border: 1px solid #00b0e9;
+}
+#TabPaging {
+    width: 1000px;
+    height: 30px;
+    text-align: center;
+}
+#Banner {
+    width: 1060px;
+    height: 150px;
+    border: 1px solid #00b0e9;
+    background-color: white;
+}
+#Banner h1{
+    text-align: center;
+    padding-top: 60px;
+}
+#Top {
+    width: 1060px;
+    height: 20px;
+    background-color:antiquewhite;
+}
+#menu {
+    width: 1060px;
+    height: 50px;
+    background-color: #00b0e9;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 5px 20px;
+}
+#menu a {
+   float: left;
+   display: block;
+   text-align: center;
+   margin:10px 25px 0px 2px;
+   text-decoration: none;
+   color:white;
+}
+#menu ul{
+    list-style:none;
+}
+#menu a:hover{
+    color:black;
+}
+#ContentsLayout {
+    width: 1060px;
+    min-height: 400px;
+    background-color: white;
+}
+#Sub-menu {
+    width: 210px;
+    min-height: 400px;
+    float: left;
+    border: 1px solid #00b0e9;
+}
+#Content {
+    width: 850px;
+    min-height: 400px;
+    float: left;
+    background-color: white;
+    padding-left: 10px;
+    border: 1px solid #00b0e9;
+    margin-left: 210px;
+    
+}
+.tab {
+    width: auto;
+    height: 50px;
+    margin-left: 700px;
+}
+.tab li {
+    list-style: none;
+    float: left;
+    padding: 3px 5px;
+    border: 1px solid #00b0e9;
+}
+.tab li a {
+    text-decoration: none;
+    color: #000000;
+}
+.Menu_bottom {
+    width: 1060px;
+    height: 150px;
+    background-color: #00b0e9;
+    text-align: inherit;
+}
+#Bottom {
+    width: 1060px;
+    height: 70px;
+    text-align: inherit;
+    float:left;
+}
+.Copyright {
+    color: black;
+    font-size: 18px;
+    width: 1060px;
+    height: 35px;
+    padding: 10px;
+    background-color: #00b0e9;
+}
+#Bottom .Copyright > h5 {
+    font-size: 18px;
+}
+.Permission {
+    color: black;
+    font-size: 18px;
+    width: 1060px;
+    height: 35px;
+    padding: 10px;
+    background-color: #00b0e9;
+}

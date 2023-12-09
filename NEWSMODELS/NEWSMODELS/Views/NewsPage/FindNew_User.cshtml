@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "FindNew_User";
+    Layout = "~/Views/Layout/Layout_User.cshtml";
+}
+<style>
+    #key {
+        width: 230px;
+        height: 30px;
+        margin-left: 170px;
+    }
+
+    button {
+        width: 60px;
+        height: 30px;
+    }
+
+    table {
+        padding: 20px;
+    }
+
+    img {
+        width: 250px;
+        height: 200px;
+    }
+
+    td {
+        padding: 10px;
+        border-bottom: 3px solid #e9e9e9;
+        border-right: 3px solid #e9e9e9;
+        box-shadow: 5px 5px 5px #e9e9e9;
+    }
+</style>
+@using NEWSMODELS.Models;
+@model PagedList.IPagedList<NEWSMODELS.Models.PageItem>
+@using PagedList.Mvc;
+@if (Model != null)
+{
+    <table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td><img src="~/UploadedFiles/@item.Image" /></td>
+                <td>
+                    <h3>@Html.ActionLink(item.Title, "ViewPageNews", new { id = item.ID_P })</h3>
+                    @Html.Raw(item.Sumary)<br />
+                    Người đăng: @item.UserAdd - Ngày đăng: @item.CreaDate
+                </td>
+            </tr>
+        }
+    </table>
+}
+<div class="tab">
+    Trang @(Model.PageCount<Model.PageNumber ? 0: Model.PageNumber) / @Model.PageCount
+    @Html.PagedListPager(Model, page => Url.Action("News_Blog", new { id = page }))
+</div>
+
+

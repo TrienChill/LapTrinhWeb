@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "FindList";
+    Layout = "~/Views/Layout/_LayoutPage.cshtml";
+}
+<style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
+    h2 {margin: 20px;}
+    #ListOut {margin-left: 30px;width: auto;height: auto;border: 1px solid black;}
+    #ListOut tr td {font-size: 18px;padding: 10px;text-align: center;}
+    #ListOut tr td b {font-size: 20px;}
+    #ID_MN {font-size: 17px;}
+    button {font-size: 17px;text-decoration: none;}
+    .link {text-decoration: none;}
+</style>
+<h2>FindList</h2>
+@model PagedList.IPagedList<NEWSMODELS.Models.PageItem>
+@using PagedList.Mvc;
+@using (Html.BeginForm("FindList", "PageItems", FormMethod.Get))
+{
+    <h3>Tìm kiếm</h3>@Html.TextBox("key")
+    <button type="submit">Tìm kiếm</button>
+}
+@if (Model != null)
+{
+    <table id="ListOut">
+        <tr style="padding: 50px"><td width="100px"><b>ID_P</b></td><td width="200px"><b>Title</b></td><td width="300px"><b>Sumary</b></td><td><b>Img</b></td><td><b>Edit</b></td><td><b>Delete</b></td><td><b>Add</b></td></tr>
+        @foreach (var m in Model)
+        {
+            <tr>
+                <td>@m.ID_P</td>
+                <td>@Html.ActionLink(@m.Title, "ViewPageItem", new { id = m.ID_P }, new { @class = "link" })</td>
+                <td>@m.Sumary</td>
+                <td><img style="width: 50px; height: 50px" src="~/UploadedFiles/@m.Image" /></td>
+                <td>@Html.ActionLink(" ", "EditPageItem", new { id = m.ID_P }, new { @class = "fa fa-edit" })</td>
+                <td>
+                    @Html.ActionLink(" ", "DeletePageItem", new { id = m.ID_P }, new
+               {
+                   @class = "fa fa-close",
+                   onclick = "return confirm('Bạn muốn xóa thật không?');"
+               })
+                </td>
+                <td>@Html.ActionLink(" ", "AddPageItem", new { id = m.ID_P }, new { @class = "fa fa-plus" })</td>
+            </tr>
+        }
+    </table>
+}
+<div class="tab">
+    Trang @(Model.PageCount<Model.PageNumber ? 0: Model.PageNumber) / @Model.PageCount
+    @Html.PagedListPager(Model, page => Url.Action("PageItemList", new { id = page }))
+</div>
+

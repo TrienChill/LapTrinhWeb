@@ -1,0 +1,193 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/CSS/CSS_Blog.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="~/CSS/CSS_Menu.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="Wapper-Blog">
+        <div id="Top-Blog">
+            <div id="Img_logo-Blog">
+                <a href="~/NewsPage/News_Blog"><img src="~/CSS/img-banner/Logo.jpg" /></a>
+            </div>
+            <div id="MenuTop">
+                <nav class="menu_top">
+                    @Html.Raw(Session["menus"])
+                    @*<ul class="clearfixmenu">
+                        <li><a href="#">1</a></li>
+                        <li>
+                            <a href="#">2<span class="arrow">&#9660;</span></a>
+                            <ul>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">3</a></li>
+                    </ul>*@
+                </nav>
+            </div>
+            <div id="Banner-Blog">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="~/CSS/img-banner/Image2.jpg" style="width:100%" />
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="~/CSS/img-banner/Image3.jpg" style="width:100%"/>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="~/CSS/img-banner/Image4.jpg" style="width:100%"/>
+                    </div>
+                    <div style="text-align: center; margin-left:800px ; margin-top: -30px;">
+                        <span class="dot" onclick="currentSlide(0)">1</span>
+                        <span class="dot" onclick="currentSlide(1)">2</span>
+                        <span class="dot" onclick="currentSlide(2)">3</span>
+                    </div>
+                </div>
+            </div>
+            <div id="menu-Blog">
+                <div id="Menu-Language">
+                    <ul>
+                        <p style="width:300px; float:left; padding:10px">Map game</p>
+                        <li><a href="~/NewsPage/IndexNew/1?mn=15">Inazuma</a></li>
+                        <li><a href="~/NewsPage/IndexNew/1?mn=16">Mondstadt</a></li>
+                        <li><a href="~/NewsPage/IndexNew/1?mn=17">Sumeru</a></li>
+                        <li><a href="~/NewsPage/IndexNew/1?mn=18">Liyue</a></li>
+                    </ul>
+                </div>
+                @using (Html.BeginForm("FindNew_User", "NewsPage", FormMethod.Get))
+                {
+                    @Html.TextBox("key")
+                    <button type="submit">Tìm kiếm</button>
+                }
+            </div>
+            <div id="Top-Content">
+
+            </div>
+            <div id="ContentsLayout-Blog">
+                <div id="Content-Blog">
+                    @RenderBody()
+                    @RenderSection("SecHotNewsBlog", false)
+                </div>
+                <div id="Content-Blog-Menu">
+                    <div id="Short-news">
+                        <table>
+                            <tr style="box-shadow: 5px 5px 5px #e9e9e9;"><p style="padding: 10px; color: red; font-size: 20px; margin-left: 20px; border-bottom: 5px solid #eee">#ITHERO<br /></p></tr>
+                            <tr>
+                                <div id="video">
+                                    <iframe width="250" height="150" src="https://www.youtube.com/embed/ZVnfjTVZrWY" title="Video cốt truyện Genshin Impact - Chỉ Còn Là Kỷ Niệm" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    
+                                </div>
+                            </tr>
+                            <tr style="box-shadow: 5px 5px 5px #e9e9e9;"><p style="padding: 10px; color: red; font-size: 20px; margin-left: 20px; border-bottom: 5px solid #eee">#Khảo sát<br /></p></tr>
+                            <tr>
+                                <div id="video">
+                                    <iframe width="250" height="150" src="https://www.youtube.com/embed/d1OANwZ29ww" title="Video Cốt Truyện Genshin Impact - Dư Âm Trong Tim" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </div>
+                            </tr>
+                        </table>
+                        @RenderSection("SecHotNewsBlog1", false)
+                        @RenderSection("SecHotNewsBlog2", false)
+                    </div>
+                </div>
+            </div>
+
+        </div>        
+        <div id="Bottom-Blog">
+            <nav class="menu-footers">
+                @Html.Raw(Session["menufooter"])
+                @*<ul class="menufooter">
+                    <li>
+                        <a href="#">111111111</a>
+                        <ul>
+                            <li><a href="#">11111111111</a></li>
+                            <li><a href="#">22222222222</a></li>
+                            <li><a href="#">33333333333</a></li>
+                            <li><a href="#">44444444444</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">222222222</a>
+                        <ul>
+                            <li><a href="#">11111111111</a></li>
+                            <li><a href="#">22222222222</a></li>
+                            <li><a href="#">33333333333</a></li>
+                            <li><a href="#">44444444444</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">33333333333</a></li>
+                </ul>*@
+            </nav>
+        </div>
+        <div id="Info-Card">
+            <div id="card-title">
+                <div id="text-title"><h5>Hãy liên hệ báo cáo vấn đề</h5></div>
+                <div id="text-info">
+                    <h5>0999.999.9999</h5><br />
+                    <h5>Email: minhtrien@gmail.com</h5>
+                </div>
+                <div id="Zalo_Sdt">
+                    <div id="Zalo">
+                        <div style="text-align: center"><i class='fa fa-comments' style='font-size: 48px; color: #e31919'></i></div>
+                        <div style="text-align: center; color:white;">
+                            <h4>Chat Zalo</h4>
+                            <h5><a style="text-decoration:none; color:white;" href="https://zaloapp.com/qr/p/1pcf1ww5vn1o5">Chat trực tiếp qua Zalo</a></h5>
+                        </div>
+                    </div>
+                    <div id="Fb">
+                        <div style="text-align: center"><i class="fa fa-facebook-square" style="font-size: 48px; color: #e31919"></i></div>
+                        <div style="text-align: center; color: white;">
+                            <h4>Gửi câu hỏi</h4>
+                            <h5><a style="text-decoration:none; color:white;">Chúng tôi sẽ phản hồi</a></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="Show-card">
+                <div id="LH">Liên hệ</div>
+            </div>
+        </div>
+        <script>
+            //khai báo biến slideIndex đại diện cho slide hiện tại
+            var slideIndex;
+            // KHai bào hàm hiển thị slide
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+
+                slides[slideIndex].style.display = "block";
+                dots[slideIndex].className += " active";
+                //chuyển đến slide tiếp theo
+                slideIndex++;
+                //nếu đang ở slide cuối cùng thì chuyển về slide đầu
+                if (slideIndex > slides.length - 1) {
+                    slideIndex = 0
+                }
+                //tự động chuyển đổi slide sau 5s
+                setTimeout(showSlides, 5000);
+            }
+            //mặc định hiển thị slide đầu tiên
+            showSlides(slideIndex = 0);
+
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+        </script>
+</body>
+</html>

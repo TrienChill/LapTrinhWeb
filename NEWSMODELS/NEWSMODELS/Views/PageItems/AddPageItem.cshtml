@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "AddPageItem";
+    Layout = "~/Views/Layout/_LayoutPage.cshtml";
+}
+<h2>AddPage</h2>
+<style>
+    #Title {font-size: 18px; width: 570px; height: 160px;}
+    #Sumary {font-size: 18px; width: 570px; height: 160px;}
+    #ID_Parent {font-size: 18px;}
+    #ListOut tr td b {font-size: 20px;}
+    #ID_P {font-size: 17px;}
+    button {font-size: 17px;text-decoration: none;}
+    .link {text-decoration: none;}
+    #OrderKey {font-size: 18px;}
+    td {font-size: 20px;}
+    h2 {margin: 20px;}
+    #file{font-size: 18px;}
+    table {margin-left: 20px;}
+</style>
+@model NEWSMODELS.Models.PageItem
+@using (Html.BeginForm("AddPageItem", "PageItems", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+<table>
+    <tr><td>ID P :</td><td><b>@Html.TextBox("ID_P", (object)ViewBag.idpnew)</b></td></tr>
+    <tr><td>Title :</td><td><b>@Html.TextArea("Title")</b></td></tr>
+    <tr><td>Sumary:</td><td><b>@Html.TextArea("Sumary")</b></td></tr>
+    <tr>
+        <td>Menu bài viết:</td>
+        <td>@Html.DropDownList("ID_Parent", new SelectList(ViewBag.parents, "ID_MN", "Lablel", ViewBag.parent), "chọn menu")</td>
+    </tr>
+    <tr><td>UserAdd:</td><td><b>@Html.TextBox("UserAdd", Html.Raw((Session["username"]).ToString()))</b></td></tr>
+    <tr><td>Sumary:</td><td><b>@Html.TextArea("CreaDate", DateTime.Now.ToString())</b></td></tr>
+    <tr>
+        <td>Image: </td>
+        <td>@Html.TextBox("file", " ", new { type = "file" })</td>
+    </tr>
+    <tr>
+        <td></td>
+        <b class="note">@Html.Raw(ViewBag.Message)</b>
+        <br />
+        <td>
+            <button type="submit"><i class="fa fa-plus"></i>Thêm PageItem</button>
+        </td>
+    </tr>
+</table>
+}

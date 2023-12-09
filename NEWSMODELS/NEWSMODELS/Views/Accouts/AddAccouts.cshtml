@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "AddAccouts";
+    Layout = "~/Views/Layout/_LayoutPage.cshtml";
+}
+<style>
+    h2 {margin: 20px;}
+    #UserName {font-size: 18px;}
+    #Password {font-size: 18px;}
+    #Email {font-size: 18px;}
+    #FullName {font-size: 18px;}
+    #Permission {font-size: 18px;}
+    #ListOut tr td b {font-size: 20px;}
+    #ListOut tr td {font-size: 20px;}
+    button {font-size: 18px;padding: 5px;text-decoration: none;}
+    .link {text-decoration: none;}
+</style>
+<h2>AddAccouts</h2>
+@using (Html.BeginForm("AddAccouts","Accouts", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+<table>
+    <tr><td>Username :</td><td><b>@Html.TextBox("UserName", (object)ViewBag.accnew)</b></td></tr>
+    <tr><td>PassWord :</td><td><b>@Html.Password("Password")</b></td></tr>
+    <tr><td>FullName:</td><td><b>@Html.TextBox("FullName")</b></td></tr>
+    <tr><td>Permission:</td><td><b>@Html.TextBox("Permission")</b></td></tr>
+    <tr><td>Email :</td><td><b>@Html.TextBox("Email")</b></td></tr>
+    <tr><td>Information:</td><td><b>@Html.TextBox("Info")</b></td></tr>
+    <tr>
+        <td>Avata: </td>
+        <td>@Html.TextBox("file", " ", new { type = "file" })</td>
+    </tr>
+    <tr>
+        <td></td>
+        <b class="note">@Html.Raw(ViewBag.Message)</b>
+        <br />
+        <td>
+            <button type="submit">Thêm accout</button>
+        </td>
+    </tr>
+</table>
+}

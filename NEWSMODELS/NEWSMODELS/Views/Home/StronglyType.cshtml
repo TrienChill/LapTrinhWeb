@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Stronglytype";
+    Layout = "~/Views/Layout/_LayoutPage.cshtml";
+}
+<h2>StronglyType</h2>
+@model IEnumerable<NEWSMODELS.Models.Menus>
+<table>
+    <tr>
+        <b><td>ID_MN</td><td>Lable</td><td>URL</td></b>
+    </tr>
+@foreach(var m in Model)
+    {
+        <tr>
+            <td>@m.ID_MN</td>
+            <td>@m.Lablel</td>
+            <td>@m.UrlLink</td>
+            <td> @Html.ActionLink("Xóa menu", "DeleteMenu", "Home", new { id = m.ID_MN }, new { onclick = "return confirm('Are you sure?')" })</td>
+        </tr>
+    }
+    </table>

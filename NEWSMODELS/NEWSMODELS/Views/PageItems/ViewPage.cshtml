@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "ViewPage";
+    Layout = "~/Views/Layout/_LayoutPage.cshtml";
+}
+<style>
+    .new li {list-style: none;font-size: 18px;}
+    .new li a {text-decoration: none;}
+</style>
+<h2>Xem tin tức</h2>
+@using NEWSMODELS.Models;
+@model PageItem
+@using (Html.BeginForm("ViewPage", "PageItems", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <tr>
+        <td>
+            <img height="100" width="100" src="~/UploadedFiles/@Html.DisplayFor(Model => Model.Image)" />
+        </td>
+        <td><h2 style="color: red">@Model.Title</h2></td>
+    </tr>
+}
+Người đăng: @Model.UserAdd - Ngày đăng: @Model.CreaDate
+<br />
+@Html.Raw(Model.Contents)
+@section SecHotNews {
+    <h3>Tin vừa cập nhập</h3>
+    <ul class="new">
+        @foreach (PageItem item in ((ViewBag.links) as IEnumerable<PageItem>))
+        {
+            <li>@Html.ActionLink(@item.Title, "ViewPage", "PageItems", new { id = item.ID_P }, new { @class = "link" })</li>
+        }
+    </ul>
+}

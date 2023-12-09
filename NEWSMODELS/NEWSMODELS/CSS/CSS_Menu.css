@@ -1,0 +1,41 @@
+body {
+	font-family: sans-serif;
+	font-size: 15px;
+}
+
+#menu-doc {
+	width: 209px;
+	float: left;
+}
+#Sub-menu #menu-doc li {
+	min-height: 45px;
+	line-height: 30px;
+	list-style: none;
+	padding: 0px 10px;
+	background: #ffffff;
+	border: solid 1px #00b0e9;
+	position: relative;
+}
+#Sub-menu #menu-doc li a{
+	text-decoration: none;
+}
+#Sub-menu #menu-doc li a:hover {
+	color: white;
+}
+#Sub-menu #menu-doc li:hover{
+	background-color: #00b0e9;
+}
+#menu-doc li:last-child {
+	border: solid 1px red;
+}
+
+#menu-doc li ul {
+	position: absolute;
+	top: 0;
+	left: 210px;
+	display: none;
+	min-width: 230px;
+}
+#menu-doc li:hover ul {
+	display: block;
+}

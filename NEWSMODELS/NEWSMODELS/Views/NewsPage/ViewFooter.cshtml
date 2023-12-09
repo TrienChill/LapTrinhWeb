@@ -1,0 +1,86 @@
+﻿
+@{
+    ViewBag.Title = "IndexFooter";
+    Layout = "~/Views/Layout/Layout_User.cshtml";
+}
+
+<style>
+    #key {
+        width: 230px;
+        height: 30px;
+        font-size: 18px;
+        margin-left: 170px;
+    }
+    button {
+        width: 60px;
+        height: 30px;
+    }
+    .new {
+        padding: 30px;
+    }
+    .new li {
+        list-style: none;
+        font-size: 18px;
+        padding-bottom: 20px;
+        list-style-type: decimal;
+        list-style-position: inside;
+    }
+    .new li a {
+        text-decoration: none;
+        color: black;
+    }
+    .new li a:hover {
+        color: red;
+    }
+    #NewsImg {
+        width: 750px;
+        height: 350px;
+        padding: 20px;
+        margin-top: 40px;
+    } 
+    #title {
+        padding: 0 20px;
+        font-weight: bold !important;
+        font-family: 'Times New Roman';
+        font-size: 34px;
+        line-height: 1.3;
+        text-align: inherit;
+    }
+    #NewSumary {
+        padding: 0 20px;
+        font-family: 'Times New Roman';
+        font-size: 20px;
+    }
+    #NewSumary li {
+        margin-left: 60px;
+    }
+    p {
+        color: #808080;
+        font-size: 20px;
+        padding: 20px 20px;
+    }
+    h2, h3, em {
+        margin-left: 20px;
+    }
+    blockquote {
+        margin-left: 60px;
+    }
+    ol {
+        margin-left: 60px;
+    }
+    form li {
+        margin-left: 60px;
+    }
+</style>
+@using NEWSMODELS.Models;
+@model PageFooter
+@using (Html.BeginForm("ViewFooter", "NewsPage", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <tr>
+        <td><p id="title" style="color: red">@Model.TitleF</p><br /></td>
+        <td>
+            <p id="cont">@Html.Raw(Model.ContentF)</p>
+        </td>
+    </tr>
+}
+
